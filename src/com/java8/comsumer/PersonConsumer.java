@@ -13,8 +13,10 @@ public class PersonConsumer {
 
     public static void main(String[] args) {
         Person person = PersonRepository.getPerson();
-        consumer1.accept(person);
-        consumer2.accept(person);
-        consumer3.accept(person);
+        // consumer1.accept(person);
+        // consumer2.accept(person);
+        // consumer3.accept(person);
+
+        consumer1.andThen(consumer2).andThen(consumer3).accept(person);
     }
 }
