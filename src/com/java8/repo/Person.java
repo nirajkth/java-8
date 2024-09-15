@@ -68,4 +68,10 @@ public class Person {
         this.hobbies = hobbies;
     }
 
+    @Override
+    public String toString() {
+        return "Person [name=" + name + ", height=" + height + ", salary=" + salary + ", gender=" + gender + ", kids="
+                + kids + ", hobbies=" + hobbies + "]";
+    }
+
 }
